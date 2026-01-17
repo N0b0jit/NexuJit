@@ -1,0 +1,142 @@
+/* UnitConverter.module.css */
+.unit-converter-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.converter-card {
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-md);
+}
+.input-group {
+  margin-bottom: 2rem;
+}
+.input-group label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+.input-group input {
+  width: 100%;
+  padding: 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  border: 2px solid var(--border);
+  border-radius: 1rem;
+  background: var(--background);
+  transition: 0.2s;
+  outline: none;
+}
+.input-group input:focus {
+  border-color: var(--primary);
+}
+.units-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.unit-select {
+  flex: 1;
+}
+.unit-select label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--secondary);
+  font-size: 0.8rem;
+}
+.unit-select select {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--border);
+  background: var(--background);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.swap-btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-hover);
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  color: var(--primary);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.2s;
+  margin-bottom: 2px;
+}
+.swap-btn:hover {
+  background: var(--primary);
+  color: white;
+  transform: rotate(180deg);
+}
+.result-display {
+  background: var(--primary-soft);
+  padding: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--primary);
+  position: relative;
+  overflow: hidden;
+}
+.result-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary);
+  word-break: break-all;
+  margin-right: 1rem;
+  line-height: 1.2;
+}
+.result-unit {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--foreground);
+  font-weight: 600;
+  margin-top: 0.25rem;
+  opacity: 0.8;
+}
+.copy-btn {
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.75rem;
+  border: none;
+  background: rgba(255,255,255,0.5);
+  color: var(--primary);
+  cursor: pointer;
+  transition: 0.2s;
+  flex-shrink: 0;
+}
+.copy-btn:hover {
+  background: white;
+  transform: scale(1.1);
+}
+@media (max-width: 640px) {
+  .units-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .swap-btn {
+    align-self: center;
+    transform: rotate(90deg);
+    margin: 0;
+  }
+  .swap-btn:hover {
+    transform: rotate(270deg);
+  }
+}
