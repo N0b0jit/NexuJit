@@ -534,6 +534,96 @@ const toolComponents: { [key: string]: any } = {
         const Comp = dynamicTool('PersonalSystemBuilder');
         return <Comp {...props} defaultTab="tomorrow" />;
     },
+    // AI Tools
+    'ai-content-detector': dynamicTool('AiDetector'),
+    'ai-text-humanizer': dynamicTool('AiHumanizer'),
+
+    // Design Neural Tools
+    'brand-psychology-auditor': (props: any) => {
+        const Comp = dynamicTool('DesignNeuralTools');
+        return <Comp {...props} defaultTab="psychology" />;
+    },
+    'site-palette-counter': (props: any) => {
+        const Comp = dynamicTool('DesignNeuralTools');
+        return <Comp {...props} defaultTab="palette" />;
+    },
+    'svg-glow-tracer': (props: any) => {
+        const Comp = dynamicTool('DesignNeuralTools');
+        return <Comp {...props} defaultTab="glow" />;
+    },
+    'svg-skeleton-generator': (props: any) => {
+        const Comp = dynamicTool('DesignNeuralTools');
+        return <Comp {...props} defaultTab="skeleton" />;
+    },
+
+    // Advanced Audio Tools
+    'audio-spectrogram': (props: any) => {
+        const Comp = dynamicTool('AdvancedAudioTools');
+        return <Comp {...props} defaultTab="spectrogram" />;
+    },
+    'audio-beat-studio': (props: any) => {
+        const Comp = dynamicTool('AdvancedAudioTools');
+        return <Comp {...props} defaultTab="beat" />;
+    },
+
+    // Fun & Games
+    'ascii-webcam-matrix': (props: any) => {
+        const Comp = dynamicTool('ViralFunTools');
+        return <Comp {...props} defaultTab="ascii" />;
+    },
+
+    // Image Tools
+    'browser-lightroom': (props: any) => {
+        const Comp = dynamicTool('ImageProTools');
+        return <Comp {...props} defaultTab="lightroom" />;
+    },
+    'image-compressor': dynamicTool('ImageCompressor'),
+
+    // PDF Tools
+    'pdf-splitter': dynamicTool('PdfSplitter'),
+
+    // Productivity Tools
+    'pomodoro-timer': dynamicTool('PomodoroTimer'),
+    'countdown-timer': dynamicTool('CountdownTimer'),
+
+    // Calculator Tools
+    'interest-calculator': dynamicTool('InterestCalculator'),
+    'loan-calculator': dynamicTool('LoanCalculator'),
+
+    // SEO Tools
+    'serp-simulator': SerpSimulator,
+    'clutter-heatmap': (props: any) => {
+        const Comp = dynamicTool('WebmasterElite');
+        return <Comp {...props} defaultTab="heatmap" />;
+    },
+
+    // Dev Tools
+    'css-audit-cleanup': (props: any) => {
+        const Comp = dynamicTool('DevEliteTools');
+        return <Comp {...props} defaultTab="audit" />;
+    },
+    'css-animation-forge': (props: any) => {
+        const Comp = dynamicTool('DevEliteTools');
+        return <Comp {...props} defaultTab="animation" />;
+    },
+    'css-grid-template-forge': (props: any) => {
+        const Comp = dynamicTool('DevEliteTools');
+        return <Comp {...props} defaultTab="grid" />;
+    },
+    'rotating-border-generator': (props: any) => {
+        const Comp = dynamicTool('DevEliteTools');
+        return <Comp {...props} defaultTab="border" />;
+    },
+
+    // Text Tools (already imported at top)
+    'bionic-reading': BionicReading,
+    'text-to-ascii': TextToAscii,
+    'whitespace-remover': WhitespaceRemover,
+    'text-to-handwriting': TextToHandwriting,
+    'url-encoder': UrlEncoder,
+    'url-decoder': UrlDecoder,
+    'google-font-pairing': GoogleFontPairing,
+    'color-contrast-checker': ColorContrastChecker
 };
 
 export default function ToolRenderer({ slug }: { slug: string }) {
