@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CursorFollower from "@/components/CursorFollower";
 import SocialPopup from "@/components/SocialPopup";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: "NexuJit - The Ultimate Digital Nexus",
@@ -42,6 +43,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <SocialPopup />
+        <Analytics />
       </body>
     </html>
   );
