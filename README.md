@@ -16,7 +16,7 @@
 ### 🚀 **Level Up Your Digital Workflow**
 **NexuJit** is a high-performance, client-side laboratory designed for the next generation of developers, bio-hackers, and content creators. We ditched the bloat and built a system that feels like magic.
 
-[**Launch App**](https://nexujit.app) · [**Report Bug**](https://github.com/nobojit-m/nexujit/issues) · [**Request Feature**](https://github.com/nobojit-m/nexujit/discussions)
+[**Launch App**](https://nexu-jit.vercel.app) · [**Report Bug**](https://github.com/N0b0jit/NexuJit/issues) · [**Request Feature**](https://github.com/N0b0jit/NexuJit/discussions)
 
 </div>
 
@@ -64,10 +64,10 @@ Want to run the Nexus locally? Say less.
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/nobojit-m/nexujit.git
+git clone https://github.com/N0b0jit/NexuJit.git
 
 # 2. Enter the matrix
-cd nexujit
+cd NexuJit
 
 # 3. Install dependencies
 npm install
