@@ -99,7 +99,7 @@ function ClutterHeatmapUI() {
 
                     <div className="flex justify-center gap-4">
                         {image && !showHeatmap && !isAnalyzing && (
-                            <Button onClick={runAudit} className="bg-accent px-12 py-4 font-black rounded-2xl shadow-2xl hover:scale-105 transition-all">GENERATE HEATMAP</Button>
+                            <Button onClick={runAnalysis} className="bg-accent px-12 py-4 font-black rounded-2xl shadow-2xl hover:scale-105 transition-all">GENERATE HEATMAP</Button>
                         )}
                         {image && (
                             <Button variant="secondary" onClick={() => setImage(null)} className="rounded-2xl border-white/20">New Audit</Button>
