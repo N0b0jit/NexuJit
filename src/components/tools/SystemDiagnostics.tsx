@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import { Cpu, Zap, Wifi, HardDrive, Monitor, Battery, Activity, Play, RotateCcw, Keyboard, Mouse, Mic, Camera } from 'lucide-react';
 
 export default function SystemDiagnostics() {
