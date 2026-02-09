@@ -39,13 +39,26 @@ We have categorized our elite tools into specialized modules:
 | **Category** | **Description** |
 | :--- | :--- |
 | **🧬 AI Power Tools** | Content generation, humanization, and neural analysis powered by Gemini. |
+| **🎥 MeluaPlayer Elite** | **[NEW]** The advanced video playback engine. Supports MKV, x265, and local network streaming with VLC Bypass. |
 | **🎨 Design Neural** | CSS generators, color psychology auditors, and SVG factories. |
 | **🦾 PDF Arsenal** | Merge, split, compress, and protect documents entirely client-side. |
-| **🎥 Media Studio** | YouTube tag extractors, video converters, and social media downloaders. |
+| **📹 Media Studio** | YouTube tag extractors, video converters, and social media downloaders. |
 | **🧠 Health & Bio** | BMI, TDEE, and biological metrics tracking. |
 | **💻 Dev Elite** | JSON/XML/CSV converters, minifiers, and system diagnostics. |
 | **🌍 Planet Watch** | Live earthquake feeds, ISS tracker, and global population. |
 | **🛡️ Security** | Password strength, breach checkers, and privacy auditing. |
+
+---
+
+## 🌟 **Flagship Tool: MeluaPlayer**
+
+The **MeluaPlayer** is a state-of-the-art video diagnostic and playback engine designed for high-bitrate streaming.
+
+*   **Universal Format Support**: Plays standard MP4/WebM files natively.
+*   **Neural Codec Bypass**: Detects unsupported formats (like **MKV/HEVC/x265**) and provides an instant "Open in VLC" bridge.
+*   **Local Network Ready**: Optimized for streaming from local servers (e.g., `172.16.x.x`) without CORS issues.
+*   **Cinema Controls**: Full keyboard shortcuts (K/J/L/F/M), playback speed control, and history tracking.
+*   **Zero-Latency**: Direct hardware-accelerated playback with no intermediate processing.
 
 ---
 
