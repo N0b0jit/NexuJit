@@ -48,19 +48,6 @@ We have categorized our elite tools into specialized modules:
 | **🌍 Planet Watch** | Live earthquake feeds, ISS tracker, and global population. |
 | **🛡️ Security** | Password strength, breach checkers, and privacy auditing. |
 
----
-
-## 🌟 **Flagship Tool: MeluaPlayer**
-
-The **MeluaPlayer** is a state-of-the-art video diagnostic and playback engine designed for high-bitrate streaming.
-
-*   **Universal Format Support**: Plays standard MP4/WebM files natively.
-*   **Neural Codec Bypass**: Detects unsupported formats (like **MKV/HEVC/x265**) and provides an instant "Open in VLC" bridge.
-*   **Local Network Ready**: Optimized for streaming from local servers (e.g., `172.16.x.x`) without CORS issues.
-*   **Cinema Controls**: Full keyboard shortcuts (K/J/L/F/M), playback speed control, and history tracking.
-*   **Zero-Latency**: Direct hardware-accelerated playback with no intermediate processing.
-
----
 
 ## 🏗 **Tech Stack (Under the Hood)**
 
