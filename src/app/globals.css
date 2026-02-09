@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@config "../../tailwind.config.js";
+
+@theme {
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-fg-primary: var(--fg-primary);
+  --color-fg-secondary: var(--fg-secondary);
+  --color-fg-tertiary: var(--fg-tertiary);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+  --color-glass-ring: var(--glass-ring);
+
+  --font-heading: "Plus Jakarta Sans", sans-serif;
+  --font-body: Inter, sans-serif;
+
+  --radius-elite: var(--radius-elite);
+  --radius-inner: var(--radius-inner);
+
+  --animate-shimmer: shimmer 0.8s infinite;
+}
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+@utility glass {
+  @apply backdrop-blur-[40px] border border-glass-border;
+  background: var(--glass-bg);
+  box-shadow:
+    0 8px 32px 0 rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px var(--glass-border);
+}
+
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #fdfdfd;
+  --bg-tertiary: #f5f7fa;
+  --fg-primary: #020617;
+  --fg-secondary: #334155;
+  --fg-tertiary: #64748b;
+  --accent: #2563eb;
+  --accent-rgb: 37, 99, 235;
+  --accent-foreground: #ffffff;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(15, 23, 42, 0.08);
+  --glass-ring: rgba(37, 99, 235, 0.1);
+  --radius-elite: 2.5rem;
+  --radius-inner: 1.5rem;
+
+  /* Legacy Variable Mapping for Tools */
+  --background: var(--bg-primary);
+  --foreground: var(--fg-primary);
+  --surface: var(--bg-secondary);
+  --border: var(--glass-border);
+  --primary: var(--accent);
+  --primary-soft: rgba(37, 99, 235, 0.1);
+  --secondary: var(--fg-secondary);
+  --card-bg: var(--bg-secondary);
+}
+
+[data-theme='dark'] {
+  --bg-primary: #02040a;
+  --bg-secondary: #0b1120;
+  --bg-tertiary: #161e2e;
+  --fg-primary: #f8fafc;
+  --fg-secondary: #cbd5e1;
+  --fg-tertiary: #94a3b8;
+  --accent: #3b82f6;
+  --accent-rgb: 59, 130, 246;
+  --accent-foreground: #ffffff;
+  --glass-bg: rgba(11, 17, 32, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-ring: rgba(59, 130, 246, 0.2);
+
+  /* Legacy Variable Mapping for Tools */
+  --background: var(--bg-primary);
+  --foreground: var(--fg-primary);
+  --surface: var(--bg-secondary);
+  --border: var(--glass-border);
+  --primary: var(--accent);
+  --primary-soft: rgba(59, 130, 246, 0.1);
+  --secondary: var(--fg-secondary);
+  --card-bg: var(--bg-secondary);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-bg-primary text-fg-primary antialiased selection:bg-accent/30 selection:text-accent-foreground;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+  }
+
+  body.custom-cursor {
+    cursor: none !important;
+  }
+
+  body.custom-cursor button,
+  body.custom-cursor a,
+  body.custom-cursor [role="button"] {
+    cursor: none !important;
+  }
+}
+
+@layer components {
+  .page-container {
+    @apply max-w-[1600px] mx-auto px-6 md:px-12 lg:px-20;
+  }
+
+  .premium-card {
+    @apply glass rounded-[var(--radius-elite)] transition-all duration-150 relative overflow-hidden;
+    box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.1);
+  }
+
+  .premium-card:hover {
+    @apply -translate-y-2 border-accent/20;
+    box-shadow:
+      0 60px 120px -30px rgba(var(--accent-rgb), 0.15),
+      0 0 0 12px var(--glass-ring);
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-fg-primary via-accent to-fg-primary animate-shimmer;
+    background-size: 200% 100%;
+  }
+
+  .shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg,
+        transparent,
+        rgba(255, 255, 255, 0.05) 20%,
+        rgba(255, 255, 255, 0.1) 60%,
+        transparent);
+    animation: shimmer 0.8s infinite;
+  }
+
+  /* Neural Grid Utility */
+  .neural-grid {
+    background-image:
+      radial-gradient(circle at 1px 1px, var(--glass-border) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-30px) rotate(2deg);
+  }
+}
+
+@keyframes glow {
+
+  0%,
+  100% {
+    opacity: 0.4;
+    filter: blur(80px);
+  }
+
+  50% {
+    opacity: 0.6;
+    filter: blur(100px);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.2;
+  }
+
+  50% {
+    transform: scale(1.05);
+    opacity: 0.4;
+  }
+
+  100% {
+    transform: scale(0.95);
+    opacity: 0.2;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-fg-tertiary/20 rounded-full border-4 border-solid border-bg-primary hover:bg-fg-tertiary/40 transition-all;
+}

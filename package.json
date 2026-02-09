@@ -1,0 +1,50 @@
+{
+  "name": "nexujit",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@distube/ytdl-core": "^4.16.12",
+    "@ffmpeg/ffmpeg": "^0.12.15",
+    "@ffmpeg/util": "^0.12.2",
+    "@google/generative-ai": "^0.24.1",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tobyg74/tiktok-api-dl": "^1.3.7",
+    "@types/figlet": "^1.7.0",
+    "@types/three": "^0.182.0",
+    "axios": "^1.13.2",
+    "cheerio": "^1.1.2",
+    "fbdl-core": "^1.0.2",
+    "figlet": "^1.9.4",
+    "framer-motion": "^12.25.0",
+    "html2canvas": "^1.4.1",
+    "instagram-url-direct": "^2.0.7",
+    "jspdf": "^3.0.4",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.562.0",
+    "next": "16.1.1",
+    "pdf-lib": "^1.17.1",
+    "puppeteer": "^24.34.0",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "recharts": "^3.6.0",
+    "three": "^0.182.0",
+    "youtubei.js": "^16.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.23",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5"
+  }
+}
